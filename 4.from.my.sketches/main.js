@@ -1,11 +1,9 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-const width = 400;
-const marginTop = 20;
-const marginRight = 20;
-const marginBottom = 30;
-const marginLeft = 40;
-const circleSpacing = 300;
+// Adjust width to be relative to viewport
+const width = window.innerWidth * 0.8; // 80% of viewport width
+const circleSpacing = 270; // Spacing between circles
+const topPadding = 150; // Increased top padding to prevent cut-off
 
 async function fetchData() {
   try {
@@ -43,32 +41,41 @@ function filterData(data) {
 }
 
 function drawCircles(data) {
-  const height = data.length * circleSpacing + 200;
+  // Calculate height based on number of items and spacing
+  const height = (data.length * circleSpacing) + topPadding; // Added more padding
 
+  // Clear previous SVG
   d3.select("#container").selectAll("svg").remove();
 
+  // Create centered SVG
   const svg = d3.select("#container")
     .append("svg")
     .attr("width", width)
-    .attr("height", height);
+    .attr("height", height)
+    .style("margin", "0 auto")
+    .style("display", "block");
 
   const circleDiameterScale = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.emission)])
-    .range([10, 240]);
+    .range([50, 240]);
 
   const colorScale = d3.scaleLinear()
     .domain([
       0, 
-      d3.max(data, d => d.emission) / 2,  // middle point
+      d3.max(data, d => d.emission) / 2,
       d3.max(data, d => d.emission)
     ])
     .range(["green", "blue", "pink"]);
 
-  const circles = svg.selectAll("g")
+  // Create a group for all circles
+  const circleGroup = svg.append("g")
+    .attr("transform", `translate(${width/2}, ${topPadding})`); // Increased top padding
+
+  const circles = circleGroup.selectAll("g")
     .data(data)
     .enter()
     .append("g")
-    .attr("transform", (d, i) => `translate(${width / 2}, ${i * circleSpacing + 150})`);
+    .attr("transform", (d, i) => `translate(0, ${i * circleSpacing})`);
 
   circles.append("circle")
     .attr("r", d => circleDiameterScale(d.emission) / 2)
@@ -79,7 +86,14 @@ function drawCircles(data) {
   circles.append("text")
     .attr("text-anchor", "middle")
     .attr("dy", d => circleDiameterScale(d.emission) / 2 + 20)
+    .style("font-size", "14px")
     .text(d => d.name);
 }
 
+// Call fetchData when window loads
 fetchData();
+
+// Update visualization when window is resized
+window.addEventListener('resize', () => {
+  fetchData();
+});
