@@ -43,7 +43,7 @@ function filterData(data) {
 }
 
 function drawCircles(data) {
-  const height = data.length * circleSpacing + 100; // Dynamic height based on data length
+  const height = data.length * circleSpacing + 200; // Dynamic height based on data length
 
   const svg = d3.select("#container")
     .append("svg")
@@ -51,11 +51,11 @@ function drawCircles(data) {
     .attr("height", height);
 
   // Adjust scales for better visibility
-  const circleRadiusScale = d3.scaleSqrt()
+  const circleDiameterScale = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.emission)])
-    .range([5, 120]); // Increased range for better visibility
+    .range([10, 240]); // Adjust range for desired diameter differences
 
-  const colorScale = d3.scaleSequential(d3.interpolateBlues)
+  const colorScale = d3.scaleSequential(d3.interpolateRgb("blue", "pink"))
     .domain([0, d3.max(data, d => d.emission)]);
 
   // Create a group for each circle and its label
@@ -67,7 +67,7 @@ function drawCircles(data) {
 
   // Add circles
   circles.append("circle")
-    .attr("r", d => circleRadiusScale(d.emission))
+    .attr("r", d => circleDiameterScale(d.emission) / 2) // Calculate radius from diameter
     .attr("fill", d => colorScale(d.emission))
     .append("title")
     .text(d => `Year: ${d.jahr}\nEmission: ${Math.round(d.emission).toLocaleString()} t/a`);
@@ -75,7 +75,7 @@ function drawCircles(data) {
   // Add year labels
   circles.append("text")
     .attr("text-anchor", "middle")
-    .attr("dy", d => circleRadiusScale(d.emission) + 20)
+    .attr("dy", d => circleDiameterScale(d.emission) / 2 + 20) // Adjust label position based on radius
     .text(d => d.jahr);
 }
 
