@@ -53,7 +53,7 @@ function drawCircles(data) {
   // Adjust scales for better visibility
   const circleRadiusScale = d3.scaleSqrt()
     .domain([0, d3.max(data, d => d.emission)])
-    .range([5, 80]); // Increased range for better visibility
+    .range([5, 120]); // Increased range for better visibility
 
   const colorScale = d3.scaleSequential(d3.interpolateBlues)
     .domain([0, d3.max(data, d => d.emission)]);
@@ -63,7 +63,7 @@ function drawCircles(data) {
     .data(data)
     .enter()
     .append("g")
-    .attr("transform", (d, i) => `translate(${width / 2}, ${i * circleSpacing + 100})`); // Increased spacing
+    .attr("transform", (d, i) => `translate(${width / 2}, ${i * circleSpacing + 150})`); // Increased spacing
 
   // Add circles
   circles.append("circle")
