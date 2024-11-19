@@ -56,8 +56,13 @@ function drawCircles(data) {
     .domain([0, d3.max(data, d => d.emission)])
     .range([10, 240]);
 
-  const colorScale = d3.scaleSequential(d3.interpolateRgb("blue", "pink"))
-    .domain([0, d3.max(data, d => d.emission)]);
+  const colorScale = d3.scaleLinear()
+    .domain([
+      0, 
+      d3.max(data, d => d.emission) / 2,  // middle point
+      d3.max(data, d => d.emission)
+    ])
+    .range(["green", "blue", "pink"]);
 
   const circles = svg.selectAll("g")
     .data(data)
