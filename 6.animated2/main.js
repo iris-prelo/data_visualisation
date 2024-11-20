@@ -85,7 +85,7 @@ function drawCircles(data) {
   // Scale for sub-bubbles
   const subBubbleScale = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.emission)])
-    .range([10, 90]);
+    .range([5, 90]);
 
   const circleGroup = svg.append("g")
     .attr("transform", `translate(${width/2}, ${topPadding})`);
@@ -183,7 +183,7 @@ function drawCircles(data) {
       .attr("class", "legend-item")
       .html(`
         <div class="legend-color" style="background: ${categoryColors[i]}"></div>
-        <span>${category.replace('food_emissions_', '').replace(/_/g, ' ').toUpperCase()}</span>
+        <span>${category.replace('food_emissions_', '').replace(/_/g, ' ').toLowerCase()}</span>
       `);
   });
 }
