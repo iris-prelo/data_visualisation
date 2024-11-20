@@ -1,0 +1,170 @@
+{
+    "Bananas": [
+        {
+            "food_emissions_land_use": 0.0,
+            "food_emissions_farm": 0.269618358,
+            "food_emissions_animal_feed": 0.0,
+            "food_emissions_processing": 0.06014592,
+            "food_emissions_transport": 0.295830362,
+            "food_emissions_retail": 0.020980708,
+            "food_emissions_packaging": 0.065670278,
+            "food_emissions_losses": 0.175184627
+        }
+    ],
+    "Beef (beef herd)": [
+        {
+            "food_emissions_land_use": 23.23753584,
+            "food_emissions_farm": 56.22806279,
+            "food_emissions_animal_feed": 2.680978528,
+            "food_emissions_processing": 1.811083009,
+            "food_emissions_transport": 0.494124578,
+            "food_emissions_retail": 0.233537838,
+            "food_emissions_packaging": 0.352084451,
+            "food_emissions_losses": 14.43999758
+        }
+    ],
+    "Cheese": [
+        {
+            "food_emissions_land_use": 4.467476309,
+            "food_emissions_farm": 13.0955392,
+            "food_emissions_animal_feed": 2.35305756,
+            "food_emissions_processing": 0.740386293,
+            "food_emissions_transport": 0.138556663,
+            "food_emissions_retail": 0.333337741,
+            "food_emissions_packaging": 0.172090931,
+            "food_emissions_losses": 2.577136521
+        }
+    ],
+    "Dark Chocolate": [
+        {
+            "food_emissions_land_use": 25.81483298,
+            "food_emissions_farm": 6.68700226,
+            "food_emissions_animal_feed": 0.0,
+            "food_emissions_processing": 0.333743892,
+            "food_emissions_transport": 0.110871398,
+            "food_emissions_retail": 0.037652218,
+            "food_emissions_packaging": 0.722433613,
+            "food_emissions_losses": 12.94020883
+        }
+    ],
+    "Eggs": [
+        {
+            "food_emissions_land_use": 0.710381288,
+            "food_emissions_farm": 1.319636556,
+            "food_emissions_animal_feed": 2.205012424,
+            "food_emissions_processing": 0.0,
+            "food_emissions_transport": 0.084063931,
+            "food_emissions_retail": 0.035615941,
+            "food_emissions_packaging": 0.16143735,
+            "food_emissions_losses": 0.153323463
+        }
+    ],
+    "Fish (farmed)": [
+        {
+            "food_emissions_land_use": 1.194717129,
+            "food_emissions_farm": 8.056114834,
+            "food_emissions_animal_feed": 1.834420269,
+            "food_emissions_processing": 0.044598632,
+            "food_emissions_transport": 0.247958628,
+            "food_emissions_retail": 0.089975618,
+            "food_emissions_packaging": 0.137537392,
+            "food_emissions_losses": 2.02712264
+        }
+    ],
+    "Lamb & Mutton": [
+        {
+            "food_emissions_land_use": 0.648246975,
+            "food_emissions_farm": 27.02574947,
+            "food_emissions_animal_feed": 3.283170334,
+            "food_emissions_processing": 1.539596149,
+            "food_emissions_transport": 0.678854295,
+            "food_emissions_retail": 0.300814068,
+            "food_emissions_packaging": 0.34760362,
+            "food_emissions_losses": 5.898234517
+        }
+    ],
+    "Milk": [
+        {
+            "food_emissions_land_use": 0.51222255,
+            "food_emissions_farm": 1.508862035,
+            "food_emissions_animal_feed": 0.243814063,
+            "food_emissions_processing": 0.154189035,
+            "food_emissions_transport": 0.093235401,
+            "food_emissions_retail": 0.265149784,
+            "food_emissions_packaging": 0.100180454,
+            "food_emissions_losses": 0.274066289
+        }
+    ],
+    "Palm Oil": [
+        {
+            "food_emissions_land_use": 2.755585078,
+            "food_emissions_farm": 1.875131956,
+            "food_emissions_animal_feed": 0.0,
+            "food_emissions_processing": 1.125325738,
+            "food_emissions_transport": 0.185116868,
+            "food_emissions_retail": 0.038737674,
+            "food_emissions_packaging": 0.788108048,
+            "food_emissions_losses": 0.548765131
+        }
+    ],
+    "Peas": [
+        {
+            "food_emissions_land_use": 0.000118777,
+            "food_emissions_farm": 0.717159966,
+            "food_emissions_animal_feed": 0.0,
+            "food_emissions_processing": 0.0,
+            "food_emissions_transport": 0.095067089,
+            "food_emissions_retail": 0.039322364,
+            "food_emissions_packaging": 0.044821982,
+            "food_emissions_losses": 0.078590739
+        }
+    ],
+    "Pig Meat": [
+        {
+            "food_emissions_land_use": 2.244068682,
+            "food_emissions_farm": 2.477097669,
+            "food_emissions_animal_feed": 4.298476294,
+            "food_emissions_processing": 0.415841843,
+            "food_emissions_transport": 0.501263865,
+            "food_emissions_retail": 0.278096013,
+            "food_emissions_packaging": 0.432286318,
+            "food_emissions_losses": 1.658551095
+        }
+    ],
+    "Poultry Meat": [
+        {
+            "food_emissions_land_use": 3.508428798,
+            "food_emissions_farm": 0.927821834,
+            "food_emissions_animal_feed": 2.452357033,
+            "food_emissions_processing": 0.607372729,
+            "food_emissions_transport": 0.381078302,
+            "food_emissions_retail": 0.243976607,
+            "food_emissions_packaging": 0.292702383,
+            "food_emissions_losses": 1.452085944
+        }
+    ],
+    "Shrimps (farmed)": [
+        {
+            "food_emissions_land_use": 0.330563074,
+            "food_emissions_farm": 13.45397854,
+            "food_emissions_animal_feed": 4.029938567,
+            "food_emissions_processing": 0.0,
+            "food_emissions_transport": 0.330851591,
+            "food_emissions_retail": 0.352361124,
+            "food_emissions_packaging": 0.536147297,
+            "food_emissions_losses": 7.832022151
+        }
+    ],
+    "Tomatoes": [
+        {
+            "food_emissions_land_use": 0.372987265,
+            "food_emissions_farm": 0.705446792,
+            "food_emissions_animal_feed": 0.0,
+            "food_emissions_processing": 0.012381556,
+            "food_emissions_transport": 0.177110774,
+            "food_emissions_retail": 0.016691531,
+            "food_emissions_packaging": 0.145671363,
+            "food_emissions_losses": 0.658417374
+        }
+    ]
+}

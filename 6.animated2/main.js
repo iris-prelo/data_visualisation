@@ -85,7 +85,7 @@ function drawCircles(data) {
   // Scale for sub-bubbles
   const subBubbleScale = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.emission)])
-    .range([20, 80]);
+    .range([10, 90]);
 
   const circleGroup = svg.append("g")
     .attr("transform", `translate(${width/2}, ${topPadding})`);
@@ -171,6 +171,21 @@ function drawCircles(data) {
       .attr("opacity", 0)
       .remove();
   }
+
+  // Add legend after the SVG creation
+  const legend = d3.select("#container")
+    .append("div")
+    .attr("class", "legend");
+
+  // Add legend items
+  emissionCategories.forEach((category, i) => {
+    legend.append("div")
+      .attr("class", "legend-item")
+      .html(`
+        <div class="legend-color" style="background: ${categoryColors[i]}"></div>
+        <span>${category.replace('food_emissions_', '').replace(/_/g, ' ').toUpperCase()}</span>
+      `);
+  });
 }
 
 // Call fetchData when window loads
