@@ -2,7 +2,7 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 const width = window.innerWidth * 0.8;
 const circleSpacing = 300;
-const topPadding = 200;
+const topPadding = 180;
 
 // Define emission categories and their colors
 const emissionCategories = [
