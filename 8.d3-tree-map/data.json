@@ -1,0 +1,59 @@
+{
+  "children": [
+    {
+      "name": "Land surface",
+      "children": [
+        {
+          "name": "Habitable land",
+          "children": [
+            {
+              "name": "Agriculture",
+              "children": [
+                {
+                  "name": "Livestock",
+                  "value": 25.15,
+                  "area": "Information Land Area: km2"
+                },
+                {
+                  "name": "Crops (excl. Feeds)",
+                  "value": 7.51,
+                  "area": "Information Land Area: km2"
+                }
+              ]
+            },
+            {
+              "name": "Forests",
+              "value": 26.98,
+              "area": "Information Land Area: km2"
+            },
+            {
+              "name": "Shrub",
+              "value": 9.94,
+              "area": "Information Land Area: km2"
+            },
+            {
+              "name": "Urban",
+              "value": 0.71,
+              "area": "Information Land Area: km2"
+            },
+            {
+              "name": "Freshwater",
+              "value": 0.71,
+              "area": "Information Land Area: km2"
+            }
+          ]
+        },
+        {
+          "name": "Glaciers",
+          "value": 10,
+          "area": "Information Land Area: km2"
+        },
+        {
+          "name": "Barren land",
+          "value": 19,
+          "area": "Information Land Area: km2"
+        }
+      ]
+    }
+  ]
+}
