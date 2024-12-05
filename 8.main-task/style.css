@@ -37,3 +37,35 @@ h1 {
   border-radius: 2px;
   padding: 5px;
 }
+
+.food-filters {
+  margin: 20px;
+}
+
+.food-btn {
+  padding: 8px 16px;
+  margin-right: 8px;
+  border: 2px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.food-btn.active {
+  background: #eee;
+  border-color: #666;
+}
+
+#calculate-btn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#calculate-btn:hover {
+  background-color: #45a049;
+}

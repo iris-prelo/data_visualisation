@@ -74,47 +74,75 @@ Id.prototype.toString = function () {
   return "url(" + this.href + ")";
 };
 
+// Update the initial currentFood value to 'banana' instead of 'all'
+let currentFood = 'banana';
+
+// Add a flag to track if initial calculation has been done
+let isInitialized = false;
+
+// Add this function to clear the visualization
+function clearChart() {
+  if (svg) {
+    svg.selectAll("*").remove();
+  }
+  d3.select("#container").selectAll("svg").remove();
+}
+
 function addEventListeners() {
   const form = document.querySelector(".form");
+  const foodButtons = document.querySelectorAll(".food-btn");
+  const calculateBtn = document.querySelector("#calculate-btn");
 
+  // Radio buttons clear the screen and reset initialization
   form.addEventListener("change", (event) => {
     if (event.target.name === "options") {
       console.log(`Selected option: ${event.target.value}`);
-      fetchData("food-data.json");
+      isInitialized = false;
+      clearChart();
     }
+  });
+
+  // Add click handlers for food buttons
+  foodButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+      if (!isInitialized) {
+        return;
+      }
+
+      foodButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+      
+      currentFood = button.dataset.food;
+      fetchData("food-data.json");
+    });
+  });
+
+  // Add click handler for calculate button
+  calculateBtn.addEventListener("click", () => {
+    isInitialized = true;
+    fetchData("food-data.json");
   });
 }
 
 function drawChart(data) {
-  // Update food categories
-  const categories = ["banana", "burger", "avocado", "tomato", "ice_cream"];
-  
+  // Flatten the data into an array of food items
+  let foodItems = data.children.flatMap((item) =>
+    Array(item.value).fill(item.name)
+  );
+
+  // Always filter food items for the selected food (removed the 'all' condition)
+  foodItems = foodItems.filter(item => item === currentFood);
+
   // Specify the color scale with new colors for foods
-  const color = d3.scaleOrdinal(
-    categories,
-    [
+  const color = d3.scaleOrdinal()
+    .domain(["banana", "burger", "avocado", "tomato", "ice_cream"])
+    .range([
       "#FFE135", // banana - yellow
       "#8B4513", // burger - brown
       "#568203", // avocado - green
       "#FF6347", // tomato - red
       "#FFDAB9"  // ice cream - pale pink
-    ]
-  );
-
-  console.log("d3.schemeTableau10: ", d3.schemeTableau10);
-
-  // Compute the layout.
-  const root = d3
-    .treemap()
-    .tile(d3.treemapSquarify) // e.g., d3.treemapSquarify
-    .size([width, height])
-    .padding(0)
-    .round(false)(
-    d3
-      .hierarchy(data)
-      .sum((d) => d.value)
-      .sort((a, b) => b.value - a.value)
-  );
+    ]);
 
   // Create the SVG container.
   if (!svg) {
@@ -125,109 +153,33 @@ function drawChart(data) {
       .attr("height", height);
   }
 
-  // Add a cell for each leaf of the hierarchy.
-  const leaf = svg.selectAll("g").data(root.leaves(), (d) => d.data.name); // make sure to use the name as key, otherwise the update will not work
+  // Clear any existing content
+  svg.selectAll("*").remove();
 
-  // define enter (instead of using .join, which would also handle update and exit)
-  const leafEnter = leaf
+  // Define the size of each square
+  const squareSize = 20;
+  const columns = Math.floor(width / squareSize);
+
+  // Add a square for each food item
+  svg.selectAll("rect")
+    .data(foodItems)
     .enter()
-    .append("g")
-    .attr("transform", (d) => `translate(${d.x0},${d.y0})`);
-
-  // Append a color rectangle.
-  leafEnter
     .append("rect")
-    .attr("id", (d) => (d.leafUid = uid("leaf")).id)
-    .attr("fill", (d) => {
-      return color(d.data.name);
-    })
-    .attr("stroke-width", 1)
-    // depending on the level of the hierarchy, change the stroke color
-    .attr("stroke", (d) => {
-      if (d.depth >= 3) {
-        return "#5F8E79";
-      } else {
-        return "#5A3D3D";
-      }
-    })
-    .attr("fill-opacity", 0)
-    .attr("width", (d) => d.x1 - d.x0)
-    .attr("height", (d) => d.y1 - d.y0)
-    // and also add event listeners for mouseover, mousemove and mouseout
-    // must be added to the rect otherwise d will not be refering to the data
-    .on("mouseover", (event, d) => {
-      console.log("d: ", d);
-      tooltip.style("visibility", "visible");
-    })
-    .on("mousemove", (event, d) => {
-      tooltip
-        .style("top", event.pageY - 10 + "px")
-        .style("left", event.pageX + 10 + "px")
-        .html(`${d.data.name}:<br>${d.data.area}`);
-    })
-    .on("mouseout", () => {
-      tooltip.style("visibility", "hidden");
-    })
-    .transition()
-    .duration(750)
-    .attr("fill-opacity", 0.6)
-    .attr("stroke-opacity", 0.6);
+    .attr("x", (d, i) => (i % columns) * squareSize)
+    .attr("y", (d, i) => Math.floor(i / columns) * squareSize)
+    .attr("width", squareSize)
+    .attr("height", squareSize)
+    .attr("fill", (d) => color(d))
+    .attr("stroke", "#fff")
+    .attr("stroke-width", 1);
 
-  leafEnter
-    .append("text")
-    .attr("clip-path", (d) => d.clipUid)
-    .selectAll("tspan")
-    .data((d) => {
-      return d.data.name
-        .split(/(?=[A-Z][a-z])|\s+/g)
-        .concat(`${d.data.value.toFixed(2)}%`);
-    })
-    .join("tspan")
-    .attr("x", 3)
-    .attr(
-      "y",
-      (d, i, nodes) => `${(i === nodes.length - 1) * 0.3 + 1.1 + i * 1.1}em`
-    )
-    .attr("fill-opacity", (d, i, nodes) =>
-      i === nodes.length - 1 ? 0.7 : null
-    )
-    .text((d) => d)
-    .transition()
-    .duration(750);
-
-  // Handle update selection (existing data).
-  leaf
-    .transition()
-    .duration(750) // Smooth transition for updates.
-    .attr("transform", (d) => `translate(${d.x0},${d.y0})`);
-
-  // don't chain methods with transition above to wait until the first transition is finished
-  leaf
-    .select("rect")
-    .transition()
-    .duration(750)
-    .attr("width", (d) => d.x1 - d.x0)
-    .attr("height", (d) => d.y1 - d.y0);
-
-  leaf
-    .select("text")
-    .selectAll("tspan")
-    .data((d) => {
-      return d.data.name
-        .split(/(?=[A-Z][a-z])|\s+/g)
-        .concat(`${d.data.value.toFixed(2)}%`);
-    })
-    .text((d) => d);
-
-  // Handle exit selection (remove data).
-  leaf.exit().remove();
-
-  // append tooltip for mouseover
-  let tooltip = d3.select("body").append("div").attr("class", "tooltip");
-
-  container.append(svg.node());
+  // Append the SVG to the container
+  d3.select("#container").append(() => svg.node());
 }
+
+// Clear the chart when the page loads
+clearChart();
 
 // make the document listen for changes on the radiobutton
 addEventListeners();
-fetchData("data.json");
+
