@@ -130,21 +130,10 @@ function drawChart(data) {
     Array(item.value).fill(item.name)
   );
 
-  // Always filter food items for the selected food (removed the 'all' condition)
+  // Filter food items for the selected food
   foodItems = foodItems.filter(item => item === currentFood);
 
-  // Specify the color scale with new colors for foods
-  const color = d3.scaleOrdinal()
-    .domain(["banana", "burger", "avocado", "tomato", "ice_cream"])
-    .range([
-      "#FFE135", // banana - yellow
-      "#8B4513", // burger - brown
-      "#568203", // avocado - green
-      "#FF6347", // tomato - red
-      "#FFDAB9"  // ice cream - pale pink
-    ]);
-
-  // Create the SVG container.
+  // Create the SVG container if it doesn't exist
   if (!svg) {
     svg = d3
       .create("svg")
@@ -156,22 +145,51 @@ function drawChart(data) {
   // Clear any existing content
   svg.selectAll("*").remove();
 
-  // Define the size of each square
-  const squareSize = 20;
-  const columns = Math.floor(width / squareSize);
+  // Define the size for each food icon
+  const iconSize = 30;
+  const columns = Math.floor(width / iconSize);
 
-  // Add a square for each food item
-  svg.selectAll("rect")
+  // Create a group for each food item
+  const foodGroups = svg.selectAll("g")
     .data(foodItems)
     .enter()
-    .append("rect")
-    .attr("x", (d, i) => (i % columns) * squareSize)
-    .attr("y", (d, i) => Math.floor(i / columns) * squareSize)
-    .attr("width", squareSize)
-    .attr("height", squareSize)
-    .attr("fill", (d) => color(d))
-    .attr("stroke", "#fff")
-    .attr("stroke-width", 1);
+    .append("g")
+    .attr("transform", (d, i) => 
+      `translate(${(i % columns) * iconSize}, ${Math.floor(i / columns) * iconSize})`
+    );
+
+  // Load and add the SVG content for each food item
+  foodGroups.each(function(d) {
+    const group = d3.select(this);
+    // Convert ice_cream to ice-cream for the filename
+    const filename = d === 'ice_cream' ? 'ice-cream' : d;
+    d3.xml(`food/${filename}.svg`).then(data => {
+      const svgNode = data.documentElement;
+      // Extract the viewBox values
+      const viewBox = svgNode.getAttribute("viewBox").split(" ");
+      const aspectRatio = viewBox[2] / viewBox[3];
+      
+      // Calculate dimensions maintaining aspect ratio
+      let width = iconSize;
+      let height = iconSize;
+      if (aspectRatio > 1) {
+        height = width / aspectRatio;
+      } else {
+        width = height * aspectRatio;
+      }
+      
+      // Center the icon within its cell
+      const xOffset = (iconSize - width) / 2;
+      const yOffset = (iconSize - height) / 2;
+      
+      group.node().appendChild(svgNode);
+      group.select("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("x", xOffset)
+        .attr("y", yOffset);
+    });
+  });
 
   // Append the SVG to the container
   d3.select("#container").append(() => svg.node());
