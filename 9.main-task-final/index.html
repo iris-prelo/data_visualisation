@@ -10,29 +10,45 @@
   </head>
 
   <body>
-    <h1>What does your phone usage amount to ?</h1>
-    <form class="form">
-      <input type="radio" id="less3" name="options" value="less3" checked />
-      <label for="less3"><3 hours per day</label><br />
+    <div class="content-wrapper">
+      <h1>What does your phone usage amount to ?</h1>
+      <form class="form">
+        <div class="radio-wrapper">
+          <input type="radio" id="less3" name="options" value="less3" checked />
+          <label for="less3"><3 hours per day</label>
+        </div>
 
-      <input type="radio" id="less5" name="options" value="less5" />
-      <label for="less5"><5 hours a day</label><br />
+        <div class="radio-wrapper">
+          <input type="radio" id="less5" name="options" value="less5" />
+          <label for="less5"><5 hours a day</label>
+        </div>
 
-      <input type="radio" id="less7" name="options" value="less7" />
-      <label for="less7"><7 hours a day</label><br />
+        <div class="radio-wrapper">
+          <input type="radio" id="less7" name="options" value="less7" />
+          <label for="less7"><7 hours a day</label>
+        </div>
 
-      <input type="radio" id="more7" name="options" value="more7" />
-      <label for="more7">>7 hours a day</label>
-    </form>
-    <div class="food-filters">
-      <button id="calculate-btn">Calculate</button>
-      <div style="margin: 10px 0"></div>
-      <button class="food-btn active" data-food="banana">Banana</button>
-      <button class="food-btn" data-food="burger">Burger</button>
-      <button class="food-btn" data-food="avocado">Avocado</button>
-      <button class="food-btn" data-food="tomato">Tomato</button>
-      <button class="food-btn" data-food="ice_cream">Ice Cream</button>
+        <div class="radio-wrapper">
+          <input type="radio" id="more7" name="options" value="more7" />
+          <label for="more7">>7 hours a day</label>
+        </div>
+      </form>
+
+      <div class="calculate-wrapper">
+        <button id="calculate-btn">Calculate</button>
+      </div>
+
+      <div class="food-filters">
+        <div class="food-buttons">
+          <button class="food-btn active" data-food="banana">Banana</button>
+          <button class="food-btn" data-food="burger">Burger</button>
+          <button class="food-btn" data-food="avocado">Avocado</button>
+          <button class="food-btn" data-food="tomato">Tomato</button>
+          <button class="food-btn" data-food="ice_cream">Ice Cream</button>
+        </div>
+      </div>
+
+      <div id="container"></div>
     </div>
-    <div id="container"></div>
   </body>
 </html>
