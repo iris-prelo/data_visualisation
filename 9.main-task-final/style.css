@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+}
+
+body {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1 {
+  font-size: 12px;
+  margin: 20px 0;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.form {
+  margin: 40px 0;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.form label {
+  display: inline-block;
+  margin-right: 40px;
+  font-size: 14px;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 10;
+  font-size: 12px;
+  visibility: hidden;
+  background-color: white;
+  border: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.food-filters {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.food-btn {
+  width: 80px;
+  height: 80px;
+  margin: 0 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #888;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.food-btn.active {
+  color: white;
+}
+
+#calculate-btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#calculate-btn:hover {
+  background-color: rgba(220, 208, 255, 0.5);
+}
+
+#calculate-btn:active {
+  background-color: rgba(220, 208, 255, 0.8);
+}
+
+::selection {
+  background: white;
+  color: black;
+}
+
+/* Increase distances between hours */
+.hour {
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Arrange food items in rows with 8 SVGs per row */
+.food-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.food-container .food-btn {
+  flex: 1 0 11%; /* 100% / 8 = 12.5%, minus some margin */
+  max-width: 11%;
+}
+
+/* Ensure the body and html can accommodate the full height */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

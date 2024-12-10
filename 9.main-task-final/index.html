@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What does your phone usage amount to ?</title>
+    <script type="module" src="./main.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <h1>What does your phone usage amount to ?</h1>
+    <form class="form">
+      <input type="radio" id="less3" name="options" value="less3" checked />
+      <label for="less3"><3 hours per day</label><br />
+
+      <input type="radio" id="less5" name="options" value="less5" />
+      <label for="less5"><5 hours a day</label><br />
+
+      <input type="radio" id="less7" name="options" value="less7" />
+      <label for="less7"><7 hours a day</label><br />
+
+      <input type="radio" id="more7" name="options" value="more7" />
+      <label for="more7">>7 hours a day</label>
+    </form>
+    <div class="food-filters">
+      <button id="calculate-btn">Calculate</button>
+      <div style="margin: 10px 0"></div>
+      <button class="food-btn active" data-food="banana">Banana</button>
+      <button class="food-btn" data-food="burger">Burger</button>
+      <button class="food-btn" data-food="avocado">Avocado</button>
+      <button class="food-btn" data-food="tomato">Tomato</button>
+      <button class="food-btn" data-food="ice_cream">Ice Cream</button>
+    </div>
+    <div id="container"></div>
+  </body>
+</html>
