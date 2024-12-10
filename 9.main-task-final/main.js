@@ -92,6 +92,7 @@ function addEventListeners() {
   const form = document.querySelector(".form");
   const foodButtons = document.querySelectorAll(".food-btn");
   const calculateBtn = document.querySelector("#calculate-btn");
+  const foodFilters = document.querySelector(".food-filters");
 
   // Radio buttons clear the screen and reset initialization
   form.addEventListener("change", (event) => {
@@ -99,6 +100,7 @@ function addEventListeners() {
       console.log(`Selected option: ${event.target.value}`);
       isInitialized = false;
       clearChart();
+      foodFilters.classList.remove('visible'); // Hide food buttons when changing radio
     }
   });
 
@@ -120,7 +122,19 @@ function addEventListeners() {
   // Add click handler for calculate button
   calculateBtn.addEventListener("click", () => {
     isInitialized = true;
-    fetchData("food-data.json");
+    foodFilters.classList.add('visible'); // Show food buttons
+    fetchData("food-data.json").then(() => {
+      // Wait for next frame to ensure DOM is updated
+      requestAnimationFrame(() => {
+        // Get the container element
+        const container = document.getElementById('container');
+        // Scroll container into view
+        container.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'end'
+        });
+      });
+    });
   });
 }
 

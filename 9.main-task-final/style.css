@@ -134,8 +134,12 @@ h1 {
 
 .food-filters {
   margin: 40px 0;
-  display: flex;
+  display: none;
   justify-content: center;
+}
+
+.food-filters.visible {
+  display: flex;
 }
 
 .food-buttons {
