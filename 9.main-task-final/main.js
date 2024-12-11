@@ -147,7 +147,7 @@ function drawChart(data) {
   // Filter food items for the selected food
   foodItems = foodItems.filter(item => item === currentFood);
 
-  const iconSize = 80;
+  const iconSize = 75;
   const iconSpacing = 30;
   const columns = 8;
   const rows = Math.ceil(foodItems.length / columns);
