@@ -1,0 +1,1250 @@
+{
+    "<3 hours": {
+        "TikTok": {
+            "Total CO2e (kg)": 3.6,
+            "Food Equivalents": {
+                "Tomato": 9.0,
+                "Banana": 18.0,
+                "Ice Cream": 7.2,
+                "Cheeseburger": 0.6,
+                "Avocado": 9.0
+            }
+        },
+        "Instagram": {
+            "Total CO2e (kg)": 1.8,
+            "Food Equivalents": {
+                "Tomato": 4.5,
+                "Banana": 9.0,
+                "Ice Cream": 3.6,
+                "Cheeseburger": 0.3,
+                "Avocado": 4.5
+            }
+        },
+        "Netflix": {
+            "Total CO2e (kg)": 10.8,
+            "Food Equivalents": {
+                "Tomato": 27.0,
+                "Banana": 54.0,
+                "Ice Cream": 21.6,
+                "Cheeseburger": 1.8,
+                "Avocado": 27.0
+            }
+        },
+        "YouTube": {
+            "Total CO2e (kg)": 5.4,
+            "Food Equivalents": {
+                "Tomato": 13.5,
+                "Banana": 27.0,
+                "Ice Cream": 10.8,
+                "Cheeseburger": 0.9,
+                "Avocado": 13.5
+            }
+        },
+        "Games": {
+            "Total CO2e (kg)": 3.6,
+            "Food Equivalents": {
+                "Tomato": 9.0,
+                "Banana": 18.0,
+                "Ice Cream": 7.2,
+                "Cheeseburger": 0.6,
+                "Avocado": 9.0
+            }
+        },
+        "TikTok, Instagram": {
+            "Total CO2e (kg)": 5.4,
+            "Food Equivalents": {
+                "Tomato": 13.5,
+                "Banana": 27.0,
+                "Ice Cream": 10.8,
+                "Cheeseburger": 0.9,
+                "Avocado": 13.5
+            }
+        },
+        "TikTok, Netflix": {
+            "Total CO2e (kg)": 14.4,
+            "Food Equivalents": {
+                "Tomato": 36.0,
+                "Banana": 72.0,
+                "Ice Cream": 28.8,
+                "Cheeseburger": 2.4,
+                "Avocado": 36.0
+            }
+        },
+        "TikTok, YouTube": {
+            "Total CO2e (kg)": 9.0,
+            "Food Equivalents": {
+                "Tomato": 22.5,
+                "Banana": 45.0,
+                "Ice Cream": 18.0,
+                "Cheeseburger": 1.5,
+                "Avocado": 22.5
+            }
+        },
+        "TikTok, Games": {
+            "Total CO2e (kg)": 7.2,
+            "Food Equivalents": {
+                "Tomato": 18.0,
+                "Banana": 36.0,
+                "Ice Cream": 14.4,
+                "Cheeseburger": 1.2,
+                "Avocado": 18.0
+            }
+        },
+        "Instagram, Netflix": {
+            "Total CO2e (kg)": 12.6,
+            "Food Equivalents": {
+                "Tomato": 31.5,
+                "Banana": 63.0,
+                "Ice Cream": 25.2,
+                "Cheeseburger": 2.1,
+                "Avocado": 31.5
+            }
+        },
+        "Instagram, YouTube": {
+            "Total CO2e (kg)": 7.2,
+            "Food Equivalents": {
+                "Tomato": 18.0,
+                "Banana": 36.0,
+                "Ice Cream": 14.4,
+                "Cheeseburger": 1.2,
+                "Avocado": 18.0
+            }
+        },
+        "Instagram, Games": {
+            "Total CO2e (kg)": 5.4,
+            "Food Equivalents": {
+                "Tomato": 13.5,
+                "Banana": 27.0,
+                "Ice Cream": 10.8,
+                "Cheeseburger": 0.9,
+                "Avocado": 13.5
+            }
+        },
+        "Netflix, YouTube": {
+            "Total CO2e (kg)": 16.2,
+            "Food Equivalents": {
+                "Tomato": 40.5,
+                "Banana": 81.0,
+                "Ice Cream": 32.4,
+                "Cheeseburger": 2.7,
+                "Avocado": 40.5
+            }
+        },
+        "Netflix, Games": {
+            "Total CO2e (kg)": 14.4,
+            "Food Equivalents": {
+                "Tomato": 36.0,
+                "Banana": 72.0,
+                "Ice Cream": 28.8,
+                "Cheeseburger": 2.4,
+                "Avocado": 36.0
+            }
+        },
+        "YouTube, Games": {
+            "Total CO2e (kg)": 9.0,
+            "Food Equivalents": {
+                "Tomato": 22.5,
+                "Banana": 45.0,
+                "Ice Cream": 18.0,
+                "Cheeseburger": 1.5,
+                "Avocado": 22.5
+            }
+        },
+        "TikTok, Instagram, Netflix": {
+            "Total CO2e (kg)": 16.2,
+            "Food Equivalents": {
+                "Tomato": 40.5,
+                "Banana": 81.0,
+                "Ice Cream": 32.4,
+                "Cheeseburger": 2.7,
+                "Avocado": 40.5
+            }
+        },
+        "TikTok, Instagram, YouTube": {
+            "Total CO2e (kg)": 10.8,
+            "Food Equivalents": {
+                "Tomato": 27.0,
+                "Banana": 54.0,
+                "Ice Cream": 21.6,
+                "Cheeseburger": 1.8,
+                "Avocado": 27.0
+            }
+        },
+        "TikTok, Instagram, Games": {
+            "Total CO2e (kg)": 9.0,
+            "Food Equivalents": {
+                "Tomato": 22.5,
+                "Banana": 45.0,
+                "Ice Cream": 18.0,
+                "Cheeseburger": 1.5,
+                "Avocado": 22.5
+            }
+        },
+        "TikTok, Netflix, YouTube": {
+            "Total CO2e (kg)": 19.8,
+            "Food Equivalents": {
+                "Tomato": 49.5,
+                "Banana": 99.0,
+                "Ice Cream": 39.6,
+                "Cheeseburger": 3.3,
+                "Avocado": 49.5
+            }
+        },
+        "TikTok, Netflix, Games": {
+            "Total CO2e (kg)": 18.0,
+            "Food Equivalents": {
+                "Tomato": 45.0,
+                "Banana": 90.0,
+                "Ice Cream": 36.0,
+                "Cheeseburger": 3.0,
+                "Avocado": 45.0
+            }
+        },
+        "TikTok, YouTube, Games": {
+            "Total CO2e (kg)": 12.6,
+            "Food Equivalents": {
+                "Tomato": 31.5,
+                "Banana": 63.0,
+                "Ice Cream": 25.2,
+                "Cheeseburger": 2.1,
+                "Avocado": 31.5
+            }
+        },
+        "Instagram, Netflix, YouTube": {
+            "Total CO2e (kg)": 18.0,
+            "Food Equivalents": {
+                "Tomato": 45.0,
+                "Banana": 90.0,
+                "Ice Cream": 36.0,
+                "Cheeseburger": 3.0,
+                "Avocado": 45.0
+            }
+        },
+        "Instagram, Netflix, Games": {
+            "Total CO2e (kg)": 16.2,
+            "Food Equivalents": {
+                "Tomato": 40.5,
+                "Banana": 81.0,
+                "Ice Cream": 32.4,
+                "Cheeseburger": 2.7,
+                "Avocado": 40.5
+            }
+        },
+        "Instagram, YouTube, Games": {
+            "Total CO2e (kg)": 10.8,
+            "Food Equivalents": {
+                "Tomato": 27.0,
+                "Banana": 54.0,
+                "Ice Cream": 21.6,
+                "Cheeseburger": 1.8,
+                "Avocado": 27.0
+            }
+        },
+        "Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 19.8,
+            "Food Equivalents": {
+                "Tomato": 49.5,
+                "Banana": 99.0,
+                "Ice Cream": 39.6,
+                "Cheeseburger": 3.3,
+                "Avocado": 49.5
+            }
+        },
+        "TikTok, Instagram, Netflix, YouTube": {
+            "Total CO2e (kg)": 21.6,
+            "Food Equivalents": {
+                "Tomato": 54.0,
+                "Banana": 108.0,
+                "Ice Cream": 43.2,
+                "Cheeseburger": 3.6,
+                "Avocado": 54.0
+            }
+        },
+        "TikTok, Instagram, Netflix, Games": {
+            "Total CO2e (kg)": 19.8,
+            "Food Equivalents": {
+                "Tomato": 49.5,
+                "Banana": 99.0,
+                "Ice Cream": 39.6,
+                "Cheeseburger": 3.3,
+                "Avocado": 49.5
+            }
+        },
+        "TikTok, Instagram, YouTube, Games": {
+            "Total CO2e (kg)": 14.4,
+            "Food Equivalents": {
+                "Tomato": 36.0,
+                "Banana": 72.0,
+                "Ice Cream": 28.8,
+                "Cheeseburger": 2.4,
+                "Avocado": 36.0
+            }
+        },
+        "TikTok, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 23.4,
+            "Food Equivalents": {
+                "Tomato": 58.5,
+                "Banana": 117.0,
+                "Ice Cream": 46.8,
+                "Cheeseburger": 3.9,
+                "Avocado": 58.5
+            }
+        },
+        "Instagram, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 21.6,
+            "Food Equivalents": {
+                "Tomato": 54.0,
+                "Banana": 108.0,
+                "Ice Cream": 43.2,
+                "Cheeseburger": 3.6,
+                "Avocado": 54.0
+            }
+        },
+        "TikTok, Instagram, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 25.2,
+            "Food Equivalents": {
+                "Tomato": 63.0,
+                "Banana": 126.0,
+                "Ice Cream": 50.4,
+                "Cheeseburger": 4.2,
+                "Avocado": 63.0
+            }
+        }
+    },
+    "<5 hours": {
+        "TikTok": {
+            "Total CO2e (kg)": 6.0,
+            "Food Equivalents": {
+                "Tomato": 15.0,
+                "Banana": 30.0,
+                "Ice Cream": 12.0,
+                "Cheeseburger": 1.0,
+                "Avocado": 15.0
+            }
+        },
+        "Instagram": {
+            "Total CO2e (kg)": 3.0,
+            "Food Equivalents": {
+                "Tomato": 7.5,
+                "Banana": 15.0,
+                "Ice Cream": 6.0,
+                "Cheeseburger": 0.5,
+                "Avocado": 7.5
+            }
+        },
+        "Netflix": {
+            "Total CO2e (kg)": 18.0,
+            "Food Equivalents": {
+                "Tomato": 45.0,
+                "Banana": 90.0,
+                "Ice Cream": 36.0,
+                "Cheeseburger": 3.0,
+                "Avocado": 45.0
+            }
+        },
+        "YouTube": {
+            "Total CO2e (kg)": 9.0,
+            "Food Equivalents": {
+                "Tomato": 22.5,
+                "Banana": 45.0,
+                "Ice Cream": 18.0,
+                "Cheeseburger": 1.5,
+                "Avocado": 22.5
+            }
+        },
+        "Games": {
+            "Total CO2e (kg)": 6.0,
+            "Food Equivalents": {
+                "Tomato": 15.0,
+                "Banana": 30.0,
+                "Ice Cream": 12.0,
+                "Cheeseburger": 1.0,
+                "Avocado": 15.0
+            }
+        },
+        "TikTok, Instagram": {
+            "Total CO2e (kg)": 9.0,
+            "Food Equivalents": {
+                "Tomato": 22.5,
+                "Banana": 45.0,
+                "Ice Cream": 18.0,
+                "Cheeseburger": 1.5,
+                "Avocado": 22.5
+            }
+        },
+        "TikTok, Netflix": {
+            "Total CO2e (kg)": 24.0,
+            "Food Equivalents": {
+                "Tomato": 60.0,
+                "Banana": 120.0,
+                "Ice Cream": 48.0,
+                "Cheeseburger": 4.0,
+                "Avocado": 60.0
+            }
+        },
+        "TikTok, YouTube": {
+            "Total CO2e (kg)": 15.0,
+            "Food Equivalents": {
+                "Tomato": 37.5,
+                "Banana": 75.0,
+                "Ice Cream": 30.0,
+                "Cheeseburger": 2.5,
+                "Avocado": 37.5
+            }
+        },
+        "TikTok, Games": {
+            "Total CO2e (kg)": 12.0,
+            "Food Equivalents": {
+                "Tomato": 30.0,
+                "Banana": 60.0,
+                "Ice Cream": 24.0,
+                "Cheeseburger": 2.0,
+                "Avocado": 30.0
+            }
+        },
+        "Instagram, Netflix": {
+            "Total CO2e (kg)": 21.0,
+            "Food Equivalents": {
+                "Tomato": 52.5,
+                "Banana": 105.0,
+                "Ice Cream": 42.0,
+                "Cheeseburger": 3.5,
+                "Avocado": 52.5
+            }
+        },
+        "Instagram, YouTube": {
+            "Total CO2e (kg)": 12.0,
+            "Food Equivalents": {
+                "Tomato": 30.0,
+                "Banana": 60.0,
+                "Ice Cream": 24.0,
+                "Cheeseburger": 2.0,
+                "Avocado": 30.0
+            }
+        },
+        "Instagram, Games": {
+            "Total CO2e (kg)": 9.0,
+            "Food Equivalents": {
+                "Tomato": 22.5,
+                "Banana": 45.0,
+                "Ice Cream": 18.0,
+                "Cheeseburger": 1.5,
+                "Avocado": 22.5
+            }
+        },
+        "Netflix, YouTube": {
+            "Total CO2e (kg)": 27.0,
+            "Food Equivalents": {
+                "Tomato": 67.5,
+                "Banana": 135.0,
+                "Ice Cream": 54.0,
+                "Cheeseburger": 4.5,
+                "Avocado": 67.5
+            }
+        },
+        "Netflix, Games": {
+            "Total CO2e (kg)": 24.0,
+            "Food Equivalents": {
+                "Tomato": 60.0,
+                "Banana": 120.0,
+                "Ice Cream": 48.0,
+                "Cheeseburger": 4.0,
+                "Avocado": 60.0
+            }
+        },
+        "YouTube, Games": {
+            "Total CO2e (kg)": 15.0,
+            "Food Equivalents": {
+                "Tomato": 37.5,
+                "Banana": 75.0,
+                "Ice Cream": 30.0,
+                "Cheeseburger": 2.5,
+                "Avocado": 37.5
+            }
+        },
+        "TikTok, Instagram, Netflix": {
+            "Total CO2e (kg)": 27.0,
+            "Food Equivalents": {
+                "Tomato": 67.5,
+                "Banana": 135.0,
+                "Ice Cream": 54.0,
+                "Cheeseburger": 4.5,
+                "Avocado": 67.5
+            }
+        },
+        "TikTok, Instagram, YouTube": {
+            "Total CO2e (kg)": 18.0,
+            "Food Equivalents": {
+                "Tomato": 45.0,
+                "Banana": 90.0,
+                "Ice Cream": 36.0,
+                "Cheeseburger": 3.0,
+                "Avocado": 45.0
+            }
+        },
+        "TikTok, Instagram, Games": {
+            "Total CO2e (kg)": 15.0,
+            "Food Equivalents": {
+                "Tomato": 37.5,
+                "Banana": 75.0,
+                "Ice Cream": 30.0,
+                "Cheeseburger": 2.5,
+                "Avocado": 37.5
+            }
+        },
+        "TikTok, Netflix, YouTube": {
+            "Total CO2e (kg)": 33.0,
+            "Food Equivalents": {
+                "Tomato": 82.5,
+                "Banana": 165.0,
+                "Ice Cream": 66.0,
+                "Cheeseburger": 5.5,
+                "Avocado": 82.5
+            }
+        },
+        "TikTok, Netflix, Games": {
+            "Total CO2e (kg)": 30.0,
+            "Food Equivalents": {
+                "Tomato": 75.0,
+                "Banana": 150.0,
+                "Ice Cream": 60.0,
+                "Cheeseburger": 5.0,
+                "Avocado": 75.0
+            }
+        },
+        "TikTok, YouTube, Games": {
+            "Total CO2e (kg)": 21.0,
+            "Food Equivalents": {
+                "Tomato": 52.5,
+                "Banana": 105.0,
+                "Ice Cream": 42.0,
+                "Cheeseburger": 3.5,
+                "Avocado": 52.5
+            }
+        },
+        "Instagram, Netflix, YouTube": {
+            "Total CO2e (kg)": 30.0,
+            "Food Equivalents": {
+                "Tomato": 75.0,
+                "Banana": 150.0,
+                "Ice Cream": 60.0,
+                "Cheeseburger": 5.0,
+                "Avocado": 75.0
+            }
+        },
+        "Instagram, Netflix, Games": {
+            "Total CO2e (kg)": 27.0,
+            "Food Equivalents": {
+                "Tomato": 67.5,
+                "Banana": 135.0,
+                "Ice Cream": 54.0,
+                "Cheeseburger": 4.5,
+                "Avocado": 67.5
+            }
+        },
+        "Instagram, YouTube, Games": {
+            "Total CO2e (kg)": 18.0,
+            "Food Equivalents": {
+                "Tomato": 45.0,
+                "Banana": 90.0,
+                "Ice Cream": 36.0,
+                "Cheeseburger": 3.0,
+                "Avocado": 45.0
+            }
+        },
+        "Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 33.0,
+            "Food Equivalents": {
+                "Tomato": 82.5,
+                "Banana": 165.0,
+                "Ice Cream": 66.0,
+                "Cheeseburger": 5.5,
+                "Avocado": 82.5
+            }
+        },
+        "TikTok, Instagram, Netflix, YouTube": {
+            "Total CO2e (kg)": 36.0,
+            "Food Equivalents": {
+                "Tomato": 90.0,
+                "Banana": 180.0,
+                "Ice Cream": 72.0,
+                "Cheeseburger": 6.0,
+                "Avocado": 90.0
+            }
+        },
+        "TikTok, Instagram, Netflix, Games": {
+            "Total CO2e (kg)": 33.0,
+            "Food Equivalents": {
+                "Tomato": 82.5,
+                "Banana": 165.0,
+                "Ice Cream": 66.0,
+                "Cheeseburger": 5.5,
+                "Avocado": 82.5
+            }
+        },
+        "TikTok, Instagram, YouTube, Games": {
+            "Total CO2e (kg)": 24.0,
+            "Food Equivalents": {
+                "Tomato": 60.0,
+                "Banana": 120.0,
+                "Ice Cream": 48.0,
+                "Cheeseburger": 4.0,
+                "Avocado": 60.0
+            }
+        },
+        "TikTok, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 39.0,
+            "Food Equivalents": {
+                "Tomato": 97.5,
+                "Banana": 195.0,
+                "Ice Cream": 78.0,
+                "Cheeseburger": 6.5,
+                "Avocado": 97.5
+            }
+        },
+        "Instagram, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 36.0,
+            "Food Equivalents": {
+                "Tomato": 90.0,
+                "Banana": 180.0,
+                "Ice Cream": 72.0,
+                "Cheeseburger": 6.0,
+                "Avocado": 90.0
+            }
+        },
+        "TikTok, Instagram, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 42.0,
+            "Food Equivalents": {
+                "Tomato": 105.0,
+                "Banana": 210.0,
+                "Ice Cream": 84.0,
+                "Cheeseburger": 7.0,
+                "Avocado": 105.0
+            }
+        }
+    },
+    "<7 hours": {
+        "TikTok": {
+            "Total CO2e (kg)": 8.4,
+            "Food Equivalents": {
+                "Tomato": 21.0,
+                "Banana": 42.0,
+                "Ice Cream": 16.8,
+                "Cheeseburger": 1.4,
+                "Avocado": 21.0
+            }
+        },
+        "Instagram": {
+            "Total CO2e (kg)": 4.2,
+            "Food Equivalents": {
+                "Tomato": 10.5,
+                "Banana": 21.0,
+                "Ice Cream": 8.4,
+                "Cheeseburger": 0.7,
+                "Avocado": 10.5
+            }
+        },
+        "Netflix": {
+            "Total CO2e (kg)": 25.2,
+            "Food Equivalents": {
+                "Tomato": 63.0,
+                "Banana": 126.0,
+                "Ice Cream": 50.4,
+                "Cheeseburger": 4.2,
+                "Avocado": 63.0
+            }
+        },
+        "YouTube": {
+            "Total CO2e (kg)": 12.6,
+            "Food Equivalents": {
+                "Tomato": 31.5,
+                "Banana": 63.0,
+                "Ice Cream": 25.2,
+                "Cheeseburger": 2.1,
+                "Avocado": 31.5
+            }
+        },
+        "Games": {
+            "Total CO2e (kg)": 8.4,
+            "Food Equivalents": {
+                "Tomato": 21.0,
+                "Banana": 42.0,
+                "Ice Cream": 16.8,
+                "Cheeseburger": 1.4,
+                "Avocado": 21.0
+            }
+        },
+        "TikTok, Instagram": {
+            "Total CO2e (kg)": 12.6,
+            "Food Equivalents": {
+                "Tomato": 31.5,
+                "Banana": 63.0,
+                "Ice Cream": 25.2,
+                "Cheeseburger": 2.1,
+                "Avocado": 31.5
+            }
+        },
+        "TikTok, Netflix": {
+            "Total CO2e (kg)": 33.6,
+            "Food Equivalents": {
+                "Tomato": 84.0,
+                "Banana": 168.0,
+                "Ice Cream": 67.2,
+                "Cheeseburger": 5.6,
+                "Avocado": 84.0
+            }
+        },
+        "TikTok, YouTube": {
+            "Total CO2e (kg)": 21.0,
+            "Food Equivalents": {
+                "Tomato": 52.5,
+                "Banana": 105.0,
+                "Ice Cream": 42.0,
+                "Cheeseburger": 3.5,
+                "Avocado": 52.5
+            }
+        },
+        "TikTok, Games": {
+            "Total CO2e (kg)": 16.8,
+            "Food Equivalents": {
+                "Tomato": 42.0,
+                "Banana": 84.0,
+                "Ice Cream": 33.6,
+                "Cheeseburger": 2.8,
+                "Avocado": 42.0
+            }
+        },
+        "Instagram, Netflix": {
+            "Total CO2e (kg)": 29.4,
+            "Food Equivalents": {
+                "Tomato": 73.5,
+                "Banana": 147.0,
+                "Ice Cream": 58.8,
+                "Cheeseburger": 4.9,
+                "Avocado": 73.5
+            }
+        },
+        "Instagram, YouTube": {
+            "Total CO2e (kg)": 16.8,
+            "Food Equivalents": {
+                "Tomato": 42.0,
+                "Banana": 84.0,
+                "Ice Cream": 33.6,
+                "Cheeseburger": 2.8,
+                "Avocado": 42.0
+            }
+        },
+        "Instagram, Games": {
+            "Total CO2e (kg)": 12.6,
+            "Food Equivalents": {
+                "Tomato": 31.5,
+                "Banana": 63.0,
+                "Ice Cream": 25.2,
+                "Cheeseburger": 2.1,
+                "Avocado": 31.5
+            }
+        },
+        "Netflix, YouTube": {
+            "Total CO2e (kg)": 37.8,
+            "Food Equivalents": {
+                "Tomato": 94.5,
+                "Banana": 189.0,
+                "Ice Cream": 75.6,
+                "Cheeseburger": 6.3,
+                "Avocado": 94.5
+            }
+        },
+        "Netflix, Games": {
+            "Total CO2e (kg)": 33.6,
+            "Food Equivalents": {
+                "Tomato": 84.0,
+                "Banana": 168.0,
+                "Ice Cream": 67.2,
+                "Cheeseburger": 5.6,
+                "Avocado": 84.0
+            }
+        },
+        "YouTube, Games": {
+            "Total CO2e (kg)": 21.0,
+            "Food Equivalents": {
+                "Tomato": 52.5,
+                "Banana": 105.0,
+                "Ice Cream": 42.0,
+                "Cheeseburger": 3.5,
+                "Avocado": 52.5
+            }
+        },
+        "TikTok, Instagram, Netflix": {
+            "Total CO2e (kg)": 37.8,
+            "Food Equivalents": {
+                "Tomato": 94.5,
+                "Banana": 189.0,
+                "Ice Cream": 75.6,
+                "Cheeseburger": 6.3,
+                "Avocado": 94.5
+            }
+        },
+        "TikTok, Instagram, YouTube": {
+            "Total CO2e (kg)": 25.2,
+            "Food Equivalents": {
+                "Tomato": 63.0,
+                "Banana": 126.0,
+                "Ice Cream": 50.4,
+                "Cheeseburger": 4.2,
+                "Avocado": 63.0
+            }
+        },
+        "TikTok, Instagram, Games": {
+            "Total CO2e (kg)": 21.0,
+            "Food Equivalents": {
+                "Tomato": 52.5,
+                "Banana": 105.0,
+                "Ice Cream": 42.0,
+                "Cheeseburger": 3.5,
+                "Avocado": 52.5
+            }
+        },
+        "TikTok, Netflix, YouTube": {
+            "Total CO2e (kg)": 46.2,
+            "Food Equivalents": {
+                "Tomato": 115.5,
+                "Banana": 231.0,
+                "Ice Cream": 92.4,
+                "Cheeseburger": 7.7,
+                "Avocado": 115.5
+            }
+        },
+        "TikTok, Netflix, Games": {
+            "Total CO2e (kg)": 42.0,
+            "Food Equivalents": {
+                "Tomato": 105.0,
+                "Banana": 210.0,
+                "Ice Cream": 84.0,
+                "Cheeseburger": 7.0,
+                "Avocado": 105.0
+            }
+        },
+        "TikTok, YouTube, Games": {
+            "Total CO2e (kg)": 29.4,
+            "Food Equivalents": {
+                "Tomato": 73.5,
+                "Banana": 147.0,
+                "Ice Cream": 58.8,
+                "Cheeseburger": 4.9,
+                "Avocado": 73.5
+            }
+        },
+        "Instagram, Netflix, YouTube": {
+            "Total CO2e (kg)": 42.0,
+            "Food Equivalents": {
+                "Tomato": 105.0,
+                "Banana": 210.0,
+                "Ice Cream": 84.0,
+                "Cheeseburger": 7.0,
+                "Avocado": 105.0
+            }
+        },
+        "Instagram, Netflix, Games": {
+            "Total CO2e (kg)": 37.8,
+            "Food Equivalents": {
+                "Tomato": 94.5,
+                "Banana": 189.0,
+                "Ice Cream": 75.6,
+                "Cheeseburger": 6.3,
+                "Avocado": 94.5
+            }
+        },
+        "Instagram, YouTube, Games": {
+            "Total CO2e (kg)": 25.2,
+            "Food Equivalents": {
+                "Tomato": 63.0,
+                "Banana": 126.0,
+                "Ice Cream": 50.4,
+                "Cheeseburger": 4.2,
+                "Avocado": 63.0
+            }
+        },
+        "Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 46.2,
+            "Food Equivalents": {
+                "Tomato": 115.5,
+                "Banana": 231.0,
+                "Ice Cream": 92.4,
+                "Cheeseburger": 7.7,
+                "Avocado": 115.5
+            }
+        },
+        "TikTok, Instagram, Netflix, YouTube": {
+            "Total CO2e (kg)": 50.4,
+            "Food Equivalents": {
+                "Tomato": 126.0,
+                "Banana": 252.0,
+                "Ice Cream": 100.8,
+                "Cheeseburger": 8.4,
+                "Avocado": 126.0
+            }
+        },
+        "TikTok, Instagram, Netflix, Games": {
+            "Total CO2e (kg)": 46.2,
+            "Food Equivalents": {
+                "Tomato": 115.5,
+                "Banana": 231.0,
+                "Ice Cream": 92.4,
+                "Cheeseburger": 7.7,
+                "Avocado": 115.5
+            }
+        },
+        "TikTok, Instagram, YouTube, Games": {
+            "Total CO2e (kg)": 33.6,
+            "Food Equivalents": {
+                "Tomato": 84.0,
+                "Banana": 168.0,
+                "Ice Cream": 67.2,
+                "Cheeseburger": 5.6,
+                "Avocado": 84.0
+            }
+        },
+        "TikTok, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 54.6,
+            "Food Equivalents": {
+                "Tomato": 136.5,
+                "Banana": 273.0,
+                "Ice Cream": 109.2,
+                "Cheeseburger": 9.1,
+                "Avocado": 136.5
+            }
+        },
+        "Instagram, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 50.4,
+            "Food Equivalents": {
+                "Tomato": 126.0,
+                "Banana": 252.0,
+                "Ice Cream": 100.8,
+                "Cheeseburger": 8.4,
+                "Avocado": 126.0
+            }
+        },
+        "TikTok, Instagram, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 58.8,
+            "Food Equivalents": {
+                "Tomato": 147.0,
+                "Banana": 294.0,
+                "Ice Cream": 117.6,
+                "Cheeseburger": 9.8,
+                "Avocado": 147.0
+            }
+        }
+    },
+    ">7 hours": {
+        "TikTok": {
+            "Total CO2e (kg)": 9.6,
+            "Food Equivalents": {
+                "Tomato": 24.0,
+                "Banana": 48.0,
+                "Ice Cream": 19.2,
+                "Cheeseburger": 1.6,
+                "Avocado": 24.0
+            }
+        },
+        "Instagram": {
+            "Total CO2e (kg)": 4.8,
+            "Food Equivalents": {
+                "Tomato": 12.0,
+                "Banana": 24.0,
+                "Ice Cream": 9.6,
+                "Cheeseburger": 0.8,
+                "Avocado": 12.0
+            }
+        },
+        "Netflix": {
+            "Total CO2e (kg)": 28.8,
+            "Food Equivalents": {
+                "Tomato": 72.0,
+                "Banana": 144.0,
+                "Ice Cream": 57.6,
+                "Cheeseburger": 4.8,
+                "Avocado": 72.0
+            }
+        },
+        "YouTube": {
+            "Total CO2e (kg)": 14.4,
+            "Food Equivalents": {
+                "Tomato": 36.0,
+                "Banana": 72.0,
+                "Ice Cream": 28.8,
+                "Cheeseburger": 2.4,
+                "Avocado": 36.0
+            }
+        },
+        "Games": {
+            "Total CO2e (kg)": 9.6,
+            "Food Equivalents": {
+                "Tomato": 24.0,
+                "Banana": 48.0,
+                "Ice Cream": 19.2,
+                "Cheeseburger": 1.6,
+                "Avocado": 24.0
+            }
+        },
+        "TikTok, Instagram": {
+            "Total CO2e (kg)": 14.4,
+            "Food Equivalents": {
+                "Tomato": 36.0,
+                "Banana": 72.0,
+                "Ice Cream": 28.8,
+                "Cheeseburger": 2.4,
+                "Avocado": 36.0
+            }
+        },
+        "TikTok, Netflix": {
+            "Total CO2e (kg)": 38.4,
+            "Food Equivalents": {
+                "Tomato": 96.0,
+                "Banana": 192.0,
+                "Ice Cream": 76.8,
+                "Cheeseburger": 6.4,
+                "Avocado": 96.0
+            }
+        },
+        "TikTok, YouTube": {
+            "Total CO2e (kg)": 24.0,
+            "Food Equivalents": {
+                "Tomato": 60.0,
+                "Banana": 120.0,
+                "Ice Cream": 48.0,
+                "Cheeseburger": 4.0,
+                "Avocado": 60.0
+            }
+        },
+        "TikTok, Games": {
+            "Total CO2e (kg)": 19.2,
+            "Food Equivalents": {
+                "Tomato": 48.0,
+                "Banana": 96.0,
+                "Ice Cream": 38.4,
+                "Cheeseburger": 3.2,
+                "Avocado": 48.0
+            }
+        },
+        "Instagram, Netflix": {
+            "Total CO2e (kg)": 33.6,
+            "Food Equivalents": {
+                "Tomato": 84.0,
+                "Banana": 168.0,
+                "Ice Cream": 67.2,
+                "Cheeseburger": 5.6,
+                "Avocado": 84.0
+            }
+        },
+        "Instagram, YouTube": {
+            "Total CO2e (kg)": 19.2,
+            "Food Equivalents": {
+                "Tomato": 48.0,
+                "Banana": 96.0,
+                "Ice Cream": 38.4,
+                "Cheeseburger": 3.2,
+                "Avocado": 48.0
+            }
+        },
+        "Instagram, Games": {
+            "Total CO2e (kg)": 14.4,
+            "Food Equivalents": {
+                "Tomato": 36.0,
+                "Banana": 72.0,
+                "Ice Cream": 28.8,
+                "Cheeseburger": 2.4,
+                "Avocado": 36.0
+            }
+        },
+        "Netflix, YouTube": {
+            "Total CO2e (kg)": 43.2,
+            "Food Equivalents": {
+                "Tomato": 108.0,
+                "Banana": 216.0,
+                "Ice Cream": 86.4,
+                "Cheeseburger": 7.2,
+                "Avocado": 108.0
+            }
+        },
+        "Netflix, Games": {
+            "Total CO2e (kg)": 38.4,
+            "Food Equivalents": {
+                "Tomato": 96.0,
+                "Banana": 192.0,
+                "Ice Cream": 76.8,
+                "Cheeseburger": 6.4,
+                "Avocado": 96.0
+            }
+        },
+        "YouTube, Games": {
+            "Total CO2e (kg)": 24.0,
+            "Food Equivalents": {
+                "Tomato": 60.0,
+                "Banana": 120.0,
+                "Ice Cream": 48.0,
+                "Cheeseburger": 4.0,
+                "Avocado": 60.0
+            }
+        },
+        "TikTok, Instagram, Netflix": {
+            "Total CO2e (kg)": 43.2,
+            "Food Equivalents": {
+                "Tomato": 108.0,
+                "Banana": 216.0,
+                "Ice Cream": 86.4,
+                "Cheeseburger": 7.2,
+                "Avocado": 108.0
+            }
+        },
+        "TikTok, Instagram, YouTube": {
+            "Total CO2e (kg)": 28.8,
+            "Food Equivalents": {
+                "Tomato": 72.0,
+                "Banana": 144.0,
+                "Ice Cream": 57.6,
+                "Cheeseburger": 4.8,
+                "Avocado": 72.0
+            }
+        },
+        "TikTok, Instagram, Games": {
+            "Total CO2e (kg)": 24.0,
+            "Food Equivalents": {
+                "Tomato": 60.0,
+                "Banana": 120.0,
+                "Ice Cream": 48.0,
+                "Cheeseburger": 4.0,
+                "Avocado": 60.0
+            }
+        },
+        "TikTok, Netflix, YouTube": {
+            "Total CO2e (kg)": 52.8,
+            "Food Equivalents": {
+                "Tomato": 132.0,
+                "Banana": 264.0,
+                "Ice Cream": 105.6,
+                "Cheeseburger": 8.8,
+                "Avocado": 132.0
+            }
+        },
+        "TikTok, Netflix, Games": {
+            "Total CO2e (kg)": 48.0,
+            "Food Equivalents": {
+                "Tomato": 120.0,
+                "Banana": 240.0,
+                "Ice Cream": 96.0,
+                "Cheeseburger": 8.0,
+                "Avocado": 120.0
+            }
+        },
+        "TikTok, YouTube, Games": {
+            "Total CO2e (kg)": 33.6,
+            "Food Equivalents": {
+                "Tomato": 84.0,
+                "Banana": 168.0,
+                "Ice Cream": 67.2,
+                "Cheeseburger": 5.6,
+                "Avocado": 84.0
+            }
+        },
+        "Instagram, Netflix, YouTube": {
+            "Total CO2e (kg)": 48.0,
+            "Food Equivalents": {
+                "Tomato": 120.0,
+                "Banana": 240.0,
+                "Ice Cream": 96.0,
+                "Cheeseburger": 8.0,
+                "Avocado": 120.0
+            }
+        },
+        "Instagram, Netflix, Games": {
+            "Total CO2e (kg)": 43.2,
+            "Food Equivalents": {
+                "Tomato": 108.0,
+                "Banana": 216.0,
+                "Ice Cream": 86.4,
+                "Cheeseburger": 7.2,
+                "Avocado": 108.0
+            }
+        },
+        "Instagram, YouTube, Games": {
+            "Total CO2e (kg)": 28.8,
+            "Food Equivalents": {
+                "Tomato": 72.0,
+                "Banana": 144.0,
+                "Ice Cream": 57.6,
+                "Cheeseburger": 4.8,
+                "Avocado": 72.0
+            }
+        },
+        "Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 52.8,
+            "Food Equivalents": {
+                "Tomato": 132.0,
+                "Banana": 264.0,
+                "Ice Cream": 105.6,
+                "Cheeseburger": 8.8,
+                "Avocado": 132.0
+            }
+        },
+        "TikTok, Instagram, Netflix, YouTube": {
+            "Total CO2e (kg)": 57.6,
+            "Food Equivalents": {
+                "Tomato": 144.0,
+                "Banana": 288.0,
+                "Ice Cream": 115.2,
+                "Cheeseburger": 9.6,
+                "Avocado": 144.0
+            }
+        },
+        "TikTok, Instagram, Netflix, Games": {
+            "Total CO2e (kg)": 52.8,
+            "Food Equivalents": {
+                "Tomato": 132.0,
+                "Banana": 264.0,
+                "Ice Cream": 105.6,
+                "Cheeseburger": 8.8,
+                "Avocado": 132.0
+            }
+        },
+        "TikTok, Instagram, YouTube, Games": {
+            "Total CO2e (kg)": 38.4,
+            "Food Equivalents": {
+                "Tomato": 96.0,
+                "Banana": 192.0,
+                "Ice Cream": 76.8,
+                "Cheeseburger": 6.4,
+                "Avocado": 96.0
+            }
+        },
+        "TikTok, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 62.4,
+            "Food Equivalents": {
+                "Tomato": 156.0,
+                "Banana": 312.0,
+                "Ice Cream": 124.8,
+                "Cheeseburger": 10.4,
+                "Avocado": 156.0
+            }
+        },
+        "Instagram, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 57.6,
+            "Food Equivalents": {
+                "Tomato": 144.0,
+                "Banana": 288.0,
+                "Ice Cream": 115.2,
+                "Cheeseburger": 9.6,
+                "Avocado": 144.0
+            }
+        },
+        "TikTok, Instagram, Netflix, YouTube, Games": {
+            "Total CO2e (kg)": 67.2,
+            "Food Equivalents": {
+                "Tomato": 168.0,
+                "Banana": 336.0,
+                "Ice Cream": 134.4,
+                "Cheeseburger": 11.2,
+                "Avocado": 168.0
+            }
+        }
+    }
+}
