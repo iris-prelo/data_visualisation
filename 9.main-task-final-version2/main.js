@@ -24,57 +24,82 @@ function getNames(node) {
 }
 
 async function fetchData(dataSet) {
-  const url = `./${dataSet}`;
-  let response = await fetch(url);
+  try {
+    const url = `./${dataSet}`;
+    let response = await fetch(url);
 
-  if (response.ok) {
-    let json = await response.json();
-    
-    // Get selected time period
-    const form = document.querySelector(".form");
-    const selectedTime = form.querySelector('input[name="options"]:checked').value;
-    
-    // Get selected apps
-    const selectedApps = Array.from(form.querySelectorAll('input[name="apps"]:checked'))
-      .map(checkbox => checkbox.value);
-    
-    if (selectedApps.length === 0) {
-      alert("Please select at least one app!");
-      return;
+    if (response.ok) {
+      let json = await response.json();
+      console.log("Fetched raw JSON:", json);
+      
+      // Get selected time period
+      const form = document.querySelector(".form");
+      const selectedTime = form.querySelector('input[name="options"]:checked').value;
+      console.log("Selected time period:", selectedTime);
+      
+      // Get selected apps
+      const selectedApps = Array.from(form.querySelectorAll('input[name="apps"]:checked'))
+        .map(checkbox => checkbox.value);
+      console.log("Selected apps:", selectedApps);
+      
+      if (selectedApps.length === 0) {
+        alert("Please select at least one app!");
+        return;
+      }
+
+      // Get the key for selected apps
+      const appKey = selectedApps.sort().join(", ");
+      console.log("Looking for app combination:", appKey);
+      
+      // Get the data for selected time period and apps
+      const timeData = json[selectedTime];
+      if (!timeData || !timeData[appKey]) {
+        console.error("No data found for combination:", { selectedTime, appKey });
+        alert("No data available for this combination!");
+        return;
+      }
+
+      console.log("Found data for combination:", timeData[appKey]);
+
+      // Map food names to file names
+      const foodMap = {
+        "Tomato": "tomato",
+        "Banana": "banana",
+        "Ice Cream": "ice_cream",
+        "Cheeseburger": "burger",
+        "Avocado": "avocado"
+      };
+
+      const foodData = timeData[appKey]["Food Equivalents"];
+      console.log("Food equivalents data:", foodData);
+
+      // Transform the data for visualization
+      const transformedData = {
+        name: "root",
+        children: Object.entries(foodData)
+          .map(([name, value]) => {
+            const mappedName = foodMap[name];
+            console.log(`Mapping ${name} to ${mappedName}`);
+            return {
+              name: mappedName,
+              value: Math.round(value)
+            };
+          })
+          .filter(item => {
+            const keep = item.name === currentFood;
+            console.log(`Filtering ${item.name} (current: ${currentFood}): ${keep}`);
+            return keep;
+          })
+      };
+
+      console.log("Final transformed data:", transformedData);
+      drawChart(transformedData);
+    } else {
+      alert("HTTP-Error: " + response.status);
     }
-
-    // Get the key for selected apps
-    const appKey = selectedApps.sort().join(", ");
-    
-    // Get the data for selected time period and apps
-    const timeData = json[selectedTime];
-    if (!timeData[appKey]) {
-      alert("No data available for this combination!");
-      return;
-    }
-
-    // Transform the data for visualization
-    const foodMap = {
-      "Tomato": "tomato",
-      "Banana": "banana",
-      "Ice Cream": "ice_cream",
-      "Cheeseburger": "burger",
-      "Avocado": "avocado"
-    };
-
-    const transformedData = {
-      name: "root",
-      children: Object.entries(timeData[appKey]["Food Equivalents"])
-        .map(([name, value]) => ({
-          name: foodMap[name],
-          value: Math.round(value)
-        }))
-        .filter(item => item.name === currentFood)
-    };
-
-    drawChart(transformedData);
-  } else {
-    alert("HTTP-Error: " + response.status);
+  } catch (error) {
+    console.error("Error in fetchData:", error);
+    alert("Error fetching data. Please check the console for details.");
   }
 }
 
@@ -160,10 +185,19 @@ function addEventListeners() {
 }
 
 function drawChart(data) {
+  console.log("Starting drawChart with data:", data);
+  
   // Flatten the data into an array of food items
   let foodItems = data.children.flatMap((item) =>
     Array(item.value).fill(item.name)
   );
+  
+  console.log("Flattened food items:", foodItems);
+
+  if (foodItems.length === 0) {
+    console.log("No food items to display!");
+    return;
+  }
 
   const iconSize = 75;
   const iconSpacing = 30;
@@ -201,43 +235,41 @@ function drawChart(data) {
     .enter()
     .append("g")
     .attr("class", "food-item")
-    .attr("transform", (d, i) => 
-      `translate(
-        ${(i % columns) * (iconSize + iconSpacing)},
-        ${Math.floor(i / columns) * (iconSize + iconSpacing)}
-      )`
-    );
+    .attr("transform", (d, i) => {
+      const x = (i % columns) * (iconSize + iconSpacing);
+      const y = Math.floor(i / columns) * (iconSize + iconSpacing);
+      console.log(`Positioning food item ${d} at (${x}, ${y})`);
+      return `translate(${x}, ${y})`;
+    });
 
   // Load and add the SVG content for each food item
   foodGroups.each(function(d) {
     const group = d3.select(this);
-    d3.xml(`food/${d}.svg`).then(data => {
-      const svgNode = data.documentElement;
-      const viewBox = svgNode.getAttribute("viewBox").split(" ");
-      const aspectRatio = viewBox[2] / viewBox[3];
-      
-      let width = iconSize;
-      let height = iconSize;
-      if (aspectRatio > 1) {
-        height = width / aspectRatio;
-      } else {
-        width = height * aspectRatio;
-      }
-      
-      const xOffset = (iconSize - width) / 2;
-      const yOffset = (iconSize - height) / 2;
-      
-      group.node().appendChild(svgNode);
-      group.select("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("x", xOffset)
-        .attr("y", yOffset);
-    });
+    const filename = d === 'ice_cream' ? 'ice-cream' : d;
+    const svgPath = `food/${filename}.svg`;
+    
+    console.log(`Attempting to load SVG: ${svgPath}`);
+    
+    d3.xml(svgPath)
+      .then(data => {
+        console.log(`Successfully loaded SVG: ${svgPath}`);
+        const svgNode = data.documentElement;
+        
+        // Set explicit width and height on the SVG element
+        svgNode.setAttribute('width', iconSize);
+        svgNode.setAttribute('height', iconSize);
+        
+        group.node().appendChild(svgNode);
+      })
+      .catch(error => {
+        console.error(`Failed to load SVG ${svgPath}:`, error);
+      });
   });
 
   // Append the SVG to the container
-  d3.select("#container").html("").append(() => svg.node());
+  const container = d3.select("#container");
+  container.html("").append(() => svg.node());
+  console.log("Chart appended to container");
 }
 
 // Clear the chart when the page loads
