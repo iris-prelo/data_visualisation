@@ -25,7 +25,7 @@ function getNames(node) {
 
 async function fetchData(dataSet) {
   try {
-    const url = `./${dataSet}`;
+    const url = `./phone_usage_food_emissions.json`;
     let response = await fetch(url);
 
     if (response.ok) {
@@ -65,7 +65,7 @@ async function fetchData(dataSet) {
       const foodMap = {
         "Tomato": "tomato",
         "Banana": "banana",
-        "Ice Cream": "ice_cream",
+        "Ice Cream": "ice-cream",
         "Cheeseburger": "burger",
         "Avocado": "avocado"
       };
@@ -245,8 +245,7 @@ function drawChart(data) {
   // Load and add the SVG content for each food item
   foodGroups.each(function(d) {
     const group = d3.select(this);
-    const filename = d === 'ice_cream' ? 'ice-cream' : d;
-    const svgPath = `food/${filename}.svg`;
+    const svgPath = `food/${d}.svg`;
     
     console.log(`Attempting to load SVG: ${svgPath}`);
     
