@@ -113,34 +113,20 @@ function addEventListeners() {
   const foodButtons = document.querySelectorAll(".food-btn");
   const calculateBtn = document.querySelector("#calculate-btn");
   const foodFilters = document.querySelector(".food-filters");
-  const appsSelection = document.querySelector(".apps-selection");
 
-  // Show apps selection when time period is selected
+  // Radio buttons clear the screen and reset initialization
   form.addEventListener("change", (event) => {
     if (event.target.name === "options") {
-      appsSelection.style.display = "block";
       isInitialized = false;
       clearChart();
       foodFilters.classList.remove('visible');
     }
   });
 
-  // Radio buttons clear the screen and reset initialization
-  form.addEventListener("change", (event) => {
-    if (event.target.name === "options") {
-      console.log(`Selected option: ${event.target.value}`);
-      isInitialized = false;
-      clearChart();
-      foodFilters.classList.remove('visible'); // Hide food buttons when changing radio
-    }
-  });
-
   // Add click handlers for food buttons
   foodButtons.forEach(button => {
     button.addEventListener("click", (event) => {
-      if (!isInitialized) {
-        return;
-      }
+      if (!isInitialized) return;
 
       foodButtons.forEach(btn => btn.classList.remove("active"));
       button.classList.add("active");
@@ -152,17 +138,21 @@ function addEventListeners() {
 
   // Add click handler for calculate button
   calculateBtn.addEventListener("click", () => {
+    const selectedApps = form.querySelectorAll('input[name="apps"]:checked');
+    if (selectedApps.length === 0) {
+      alert("Please select at least one app!");
+      return;
+    }
+
     isInitialized = true;
-    foodFilters.classList.add('visible'); // Show food buttons
+    foodFilters.classList.add('visible');
     fetchData("food-data.json").then(() => {
       // Wait for next frame to ensure DOM is updated
       requestAnimationFrame(() => {
-        // Get the container element
         const container = document.getElementById('container');
-        // Scroll container into view
         container.scrollIntoView({ 
           behavior: 'smooth',
-          block: 'end'
+          block: 'center'
         });
       });
     });
