@@ -201,7 +201,7 @@ h1 {
 
 .food-btn {
   width: 80px;
-  height: 80px;
+  height: 40px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -215,12 +215,12 @@ h1 {
 }
 
 #container {
-  margin-top: 40px;
+  margin-top: 0px;
   min-height: 1000px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: top;
 }
 
 #calculate-btn {
