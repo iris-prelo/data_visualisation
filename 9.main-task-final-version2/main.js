@@ -182,15 +182,20 @@ function addEventListeners() {
 
     isInitialized = true;
     foodFilters.classList.add('visible');
-    fetchData("food-data.json").then(() => {
-      requestAnimationFrame(() => {
-        const container = document.getElementById('container');
-        container.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'center'
-        });
+    
+    // Force a small delay to ensure DOM updates
+    setTimeout(() => {
+      console.log("Attempting to scroll...");
+      console.log("Current scroll position:", window.pageYOffset);
+      window.scrollTo({
+        top: 600,
+        behavior: 'smooth'
       });
-    });
+      console.log("New scroll position:", window.pageYOffset);
+    }, 100);
+    
+    // Then fetch the data
+    fetchData("food-data.json");
   });
 
   // Radio buttons trigger the animation
@@ -311,5 +316,3 @@ clearChart();
 
 // make the document listen for changes on the radiobutton
 addEventListeners();
-
-
