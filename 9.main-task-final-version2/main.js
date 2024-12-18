@@ -162,13 +162,47 @@ function addEventListeners() {
   const foodButtons = document.querySelectorAll(".food-btn");
   const calculateBtn = document.querySelector("#calculate-btn");
   const foodFilters = document.querySelector(".food-filters");
+  const timeSelector = document.querySelector(".time-selector");
+  const appsSelection = document.querySelector(".apps-selection");
 
-  // Radio buttons clear the screen and reset initialization
+  // Add validation for time selection
+  calculateBtn.addEventListener("click", () => {
+    const selectedTime = form.querySelector('input[name="options"]:checked');
+    const selectedApps = form.querySelectorAll('input[name="apps"]:checked');
+    
+    if (!selectedTime) {
+      alert("Please select a time period!");
+      return;
+    }
+    
+    if (selectedApps.length === 0) {
+      alert("Please select at least one app!");
+      return;
+    }
+
+    isInitialized = true;
+    foodFilters.classList.add('visible');
+    fetchData("food-data.json").then(() => {
+      requestAnimationFrame(() => {
+        const container = document.getElementById('container');
+        container.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'center'
+        });
+      });
+    });
+  });
+
+  // Radio buttons trigger the animation
   form.addEventListener("change", (event) => {
     if (event.target.name === "options") {
       isInitialized = false;
       clearChart();
       foodFilters.classList.remove('visible');
+      
+      // Add animation classes
+      timeSelector.classList.add('moved');
+      appsSelection.classList.add('visible');
     }
   });
 
@@ -182,28 +216,6 @@ function addEventListeners() {
       
       currentFood = button.dataset.food;
       fetchData("food-data.json");
-    });
-  });
-
-  // Add click handler for calculate button
-  calculateBtn.addEventListener("click", () => {
-    const selectedApps = form.querySelectorAll('input[name="apps"]:checked');
-    if (selectedApps.length === 0) {
-      alert("Please select at least one app!");
-      return;
-    }
-
-    isInitialized = true;
-    foodFilters.classList.add('visible');
-    fetchData("food-data.json").then(() => {
-      // Wait for next frame to ensure DOM is updated
-      requestAnimationFrame(() => {
-        const container = document.getElementById('container');
-        container.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'center'
-        });
-      });
     });
   });
 }
@@ -300,4 +312,5 @@ clearChart();
 
 // make the document listen for changes on the radiobutton
 addEventListeners();
+
 

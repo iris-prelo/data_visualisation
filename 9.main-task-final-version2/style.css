@@ -278,15 +278,33 @@ body {
   justify-content: center;
   gap: 60px;
   margin-bottom: 40px;
+  position: relative;
 }
 
-.time-selector,
+.time-selector {
+  text-align: left;
+  padding: 20px;
+  border: 2px solid #dcd6f7;
+  border-radius: 10px;
+  min-width: 200px;
+  transition: transform 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
 .apps-selection {
   text-align: left;
   padding: 20px;
-  border: 1px solid #dcd6f7;
+  border: 2px solid #dcd6f7;
   border-radius: 10px;
   min-width: 200px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  z-index: 1;
 }
 
 .time-selector h3,
@@ -315,4 +333,15 @@ body {
 
 .checkbox-wrapper:hover label {
   color: #dcd6f7;
+}
+
+/* Add these new classes for the animations */
+.time-selector.moved {
+  transform: translateX(calc(-50% - 30px)); /* Half the gap */
+}
+
+.apps-selection.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(calc(50% + 30px)); /* Half the gap */
 }
