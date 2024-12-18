@@ -30,38 +30,62 @@ async function fetchData(dataSet) {
 
     if (response.ok) {
       let json = await response.json();
-      console.log("Fetched raw JSON:", json);
       
-      // Get selected time period
       const form = document.querySelector(".form");
       const selectedTime = form.querySelector('input[name="options"]:checked').value;
       console.log("Selected time period:", selectedTime);
       
-      // Get selected apps
+      // Get selected apps and order them to match JSON format
       const selectedApps = Array.from(form.querySelectorAll('input[name="apps"]:checked'))
         .map(checkbox => checkbox.value);
-      console.log("Selected apps:", selectedApps);
       
-      if (selectedApps.length === 0) {
+      // Define the correct order as it appears in the JSON
+      const appOrder = ["TikTok", "Instagram", "Netflix", "YouTube", "Gaming"];
+      
+      // Sort the selected apps according to the JSON order
+      const orderedApps = selectedApps.sort((a, b) => {
+        return appOrder.indexOf(a) - appOrder.indexOf(b);
+      });
+      
+      console.log("Selected apps:", orderedApps);
+      console.log("Number of selected apps:", orderedApps.length);
+      
+      if (orderedApps.length === 0) {
         alert("Please select at least one app!");
         return;
       }
 
-      // Get the key for selected apps
-      const appKey = selectedApps.sort().join(", ");
-      console.log("Looking for app combination:", appKey);
+      const appKey = orderedApps.join(", ");
+      console.log("Looking for combination key:", appKey);
       
-      // Get the data for selected time period and apps
       const timeData = json[selectedTime];
+      console.log("Available combinations:", Object.keys(timeData));
+      
+      // Check if the exact key exists in the data
+      const keyExists = appKey in timeData;
+      console.log("Key exists in data:", keyExists);
+      console.log("Looking up:", {
+        timeKey: selectedTime,
+        appKey: appKey,
+        availableTimeKeys: Object.keys(json),
+        availableAppKeys: timeData ? Object.keys(timeData) : []
+      });
+      
       if (!timeData || !timeData[appKey]) {
-        console.error("No data found for combination:", { selectedTime, appKey });
+        console.error("Data lookup failed:", {
+          timeSelected: selectedTime,
+          appsSelected: orderedApps,
+          combinationKey: appKey,
+          keyFoundInData: keyExists,
+          availableKeys: timeData ? Object.keys(timeData) : []
+        });
         alert("No data available for this combination!");
         return;
       }
 
       console.log("Found data for combination:", timeData[appKey]);
 
-      // Map food names to file names
+      // Update foodMap to exactly match JSON keys
       const foodMap = {
         "Tomato": "tomato",
         "Banana": "banana",
