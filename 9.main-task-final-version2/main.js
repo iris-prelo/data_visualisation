@@ -237,15 +237,15 @@ function drawChart(data) {
 
   const iconSize = 75;
   const iconSpacing = 30;
-  const columns = 8;
+  const columns = 9;
   const rows = Math.ceil(foodItems.length / columns);
   
   const totalWidth = columns * (iconSize + iconSpacing) - iconSpacing;
   const totalHeight = rows * (iconSize + iconSpacing) - iconSpacing;
 
-  // Set fixed dimensions for the SVG
-  const width = 1000;
-  const height = 600;
+  // Set width and make height dynamic based on content
+  const width = 1200;
+  const height = Math.max(600, totalHeight + 40);
 
   // Create the SVG container if it doesn't exist
   if (!svg) {
@@ -258,12 +258,11 @@ function drawChart(data) {
   // Clear any existing content
   svg.selectAll("*").remove();
 
-  // Create a centered group for all icons
+  // Create a group for all icons, positioned at the top
   const mainGroup = svg.append("g")
     .attr("transform", `translate(
       ${(width - totalWidth) / 2},
-      ${(height - totalHeight) / 2}
-    )`);
+      20)`);
 
   // Create a group for each food item
   const foodGroups = mainGroup.selectAll("g.food-item")

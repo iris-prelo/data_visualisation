@@ -216,10 +216,10 @@ h1 {
 
 #container {
   margin-top: 40px;
-  min-height: 600px;
+  min-height: 1000px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
