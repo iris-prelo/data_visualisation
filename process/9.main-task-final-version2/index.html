@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What does your phone usage amount to ?</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./main.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <img src="food/lines.svg" class="background-lines" alt="" />
+
+    <div class="content-wrapper">
+      <h1>What does your phone usage amount to ?</h1>
+      <form class="form">
+        <div class="selectors-container">
+          <div class="time-selector">
+            <h3>Select Time :</h3>
+            <div class="checkbox-wrapper">
+              <input type="radio" id="less3" name="options" value="<3 hours" />
+              <label for="less3">< 3 hours a day</label>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <input type="radio" id="less5" name="options" value="<5 hours" />
+              <label for="less5">< 5 hours a day</label>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <input type="radio" id="less7" name="options" value="<7 hours" />
+              <label for="less7">< 7 hours a day</label>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <input type="radio" id="more7" name="options" value=">7 hours" />
+              <label for="more7">> 7 hours a day</label>
+            </div>
+          </div>
+
+          <div class="apps-selection">
+            <h3>Select Apps :</h3>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="tiktok" name="apps" value="TikTok" />
+              <label for="tiktok">TikTok</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input
+                type="checkbox"
+                id="instagram"
+                name="apps"
+                value="Instagram"
+              />
+              <label for="instagram">Instagram</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="netflix" name="apps" value="Netflix" />
+              <label for="netflix">Netflix</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="youtube" name="apps" value="YouTube" />
+              <label for="youtube">YouTube</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="games" name="apps" value="Gaming" />
+              <label for="games">Games</label>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="calculate-wrapper">
+        <button id="calculate-btn">Calculate</button>
+      </div>
+
+      <div class="food-filters">
+        <div class="food-buttons">
+          <button class="food-btn active" data-food="banana">Bananas</button>
+          <button class="food-btn" data-food="burger">Burgers</button>
+          <button class="food-btn" data-food="avocado">Avocados</button>
+          <button class="food-btn" data-food="tomato">Tomatoes</button>
+          <button class="food-btn" data-food="ice-cream">Ice-Creams</button>
+        </div>
+      </div>
+
+      <div id="container"></div>
+    </div>
+  </body>
+</html>
