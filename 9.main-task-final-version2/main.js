@@ -118,8 +118,10 @@ async function fetchData(dataSet) {
 
       console.log("Final transformed data:", transformedData);
       drawChart(transformedData);
+      return Promise.resolve();
     } else {
       alert("HTTP-Error: " + response.status);
+      return Promise.reject();
     }
   } catch (error) {
     console.error("Error in fetchData:", error);
@@ -165,7 +167,6 @@ function addEventListeners() {
   const timeSelector = document.querySelector(".time-selector");
   const appsSelection = document.querySelector(".apps-selection");
 
-  // Add validation for time selection
   calculateBtn.addEventListener("click", () => {
     const selectedTime = form.querySelector('input[name="options"]:checked');
     const selectedApps = form.querySelectorAll('input[name="apps"]:checked');
@@ -183,19 +184,24 @@ function addEventListeners() {
     isInitialized = true;
     foodFilters.classList.add('visible');
     
-    // Force a small delay to ensure DOM updates
-    setTimeout(() => {
-      console.log("Attempting to scroll...");
-      console.log("Current scroll position:", window.pageYOffset);
-      window.scrollTo({
-        top: 600,
-        behavior: 'smooth'
-      });
-      console.log("New scroll position:", window.pageYOffset);
-    }, 100);
+    // Set minimum height for container
+    const container = document.querySelector("#container");
+    container.style.minHeight = "3000px";
     
-    // Then fetch the data
-    fetchData("food-data.json");
+    // First fetch and render the data
+    fetchData("food-data.json")
+      .then(() => {
+        // After the data is loaded and rendered, scroll down
+        setTimeout(() => {
+          window.scrollTo({
+            top: 620,
+            behavior: 'smooth'
+          });
+        }, 500); // Increased delay to 500ms
+      })
+      .catch(error => {
+        console.error("Error during data fetch or scroll:", error);
+      });
   });
 
   // Radio buttons trigger the animation
